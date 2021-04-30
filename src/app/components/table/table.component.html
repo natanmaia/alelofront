@@ -1,0 +1,14 @@
+<!-- TABELA COMPONENTIZADA -->
+
+<table class="table table-hover table-striped table-bordered" *ngIf="props.body && props.body.length">
+	<thead>
+    <tr>
+      <th *ngFor="let head of props.head">{{ head }}</th>
+    </tr>
+  </thead>
+	<tbody>
+    <tr *ngFor="let item of props.body">
+      <ng-template [ngTemplateOutlet]="tableRow" [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
+    </tr>
+  </tbody>
+</table>

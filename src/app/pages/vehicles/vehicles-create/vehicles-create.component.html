@@ -1,0 +1,37 @@
+<!-- MODAL ADD-->
+<div class="modal-header">
+    <h4 class="modal-title" id="">Adicionar Veículo</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d.emit();">
+        <span aria-hidden="false">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="formAddEdit">
+        <div class="row">
+            
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                <label>Model</label>
+                <input class="form-control" formControlName="model">
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+                <label>Plate</label>
+                <input class="form-control" formControlName="plate" type="text">
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                <label>Manufacturer</label>
+                <textarea class="form-control" formControlName="manufacturer"></textarea>
+            </div>
+            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+                <label>Color</label>
+                <textarea class="form-control" formControlName="color"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="d.emit();">Fechar</button>
+    <button type="button" class="btn btn-success"
+        (click)="(vehicles)?update():save()">{{(vehicles) ? 'Atualizar' : 'Salvar'}}</button>
+</div>
+<ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }">
+</ngx-loading>

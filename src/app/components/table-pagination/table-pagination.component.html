@@ -1,0 +1,23 @@
+<!-- TABELA COMPONENTIZADA -->
+<div class="form-group form-inline" >
+  Busca: <input class="form-control ml-2" type="text" [(ngModel)]="term" />
+  <span class="ml-3"></span>
+</div>
+<table class="table table-hover table-striped table-bordered" >
+  <thead>
+  <tr>
+    <th *ngFor="let head of props.head" sortable="{{head.head2}}" (sort)="onSort($event)">{{ head.head1 }}</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="props.body && props.body.length">
+  <tr *ngFor="let item of props.body | filter:term | paginate: { itemsPerPage: 5, currentPage: paginaAtual }; let i = index">
+    <ng-template [ngTemplateOutlet]="tableRow" [ngTemplateOutletContext]="{ $implicit: item }"></ng-template>
+  </tr>
+  </tbody>
+</table>
+<p *ngIf="props.body.length === 0">
+  Nenhum registro encontrado...
+</p>
+<p class="text-center" *ngIf="props.body && props.body.length">
+<pagination-controls previousLabel="Anterior" nextLabel="Próximo" (pageChange)="paginaAtual = $event"></pagination-controls>
+</p>
