@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from '../components/components.module';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ToastrModule } from 'ngx-toastr';
     SharedModule,
     RouterModule,
     HttpClientModule,
+    CommonModule,
     PagesRoutingModule,
     DashboardModule,
     VehiclesModule,

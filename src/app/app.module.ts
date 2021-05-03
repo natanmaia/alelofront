@@ -11,6 +11,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BrowserModule,
+    CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,

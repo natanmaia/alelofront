@@ -7,6 +7,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
 import { NgxLoadingModule } from 'ngx-loading';
 import { VehiclesCreateComponent } from './vehicles-create/vehicles-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     VehiclesRoutingModule,
     RouterModule,
+    CommonModule,
     ComponentsModule,
     NgxLoadingModule,
     FormsModule,

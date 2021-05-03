@@ -9,21 +9,25 @@
     <form [formGroup]="formAddEdit">
         <div class="row">
             
-            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12">
                 <label>Model</label>
                 <input class="form-control" formControlName="model">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6 col-xs-12">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
                 <label>Plate</label>
                 <input class="form-control" formControlName="plate" type="text">
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12">
                 <label>Manufacturer</label>
-                <textarea class="form-control" formControlName="manufacturer"></textarea>
+                <input class="form-control" formControlName="manufacturer">
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
                 <label>Color</label>
-                <textarea class="form-control" formControlName="color"></textarea>
+                <input class="form-control" formControlName="color">
+            </div>
+            <div class="col-md-1 col-sm-1 col-lg-1 col-xs-12">
+                <label>Ativo</label>
+                <input type="checkbox" class="form-control" formControlName="status">
             </div>
         </div>
     </form>

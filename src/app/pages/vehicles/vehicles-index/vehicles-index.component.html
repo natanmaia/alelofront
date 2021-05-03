@@ -29,7 +29,10 @@
                 <td>{{ vehicles.plate }}</td>
                 <td>{{ vehicles.model }}</td>
                 <td>{{ vehicles.manufacturer }}</td>
-                <td>{{ vehicles.status }}</td>
+                <td>
+                  <p *ngIf="vehicles.status">Ativo</p>
+                  <p *ngIf="vehicles.status == false">Inativo</p>
+                </td>
                 <td width="10%">
                     <div class="btn-toolbar" role="toolbar">
                       <div class="btn-group" role="group">
